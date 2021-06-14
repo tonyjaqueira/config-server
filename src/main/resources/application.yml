@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: app-config-serve
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/tonyjaqueira/tony-config-server
+          #username: username
+          #password: senhaqui
+          default-label: main
+          search-paths:
+          - 'greeting-service*'
